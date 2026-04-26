@@ -6,6 +6,7 @@ export const  sendMessage = (body)=>{
     return messageRepository.createDocument({content, receiverId})
 }
 
+// list all messages
 export const listMyMessages = (userId) =>{
     return MessageRepository.findDocuments({receiverId: userId})
 }
